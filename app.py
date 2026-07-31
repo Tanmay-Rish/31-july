@@ -4,7 +4,8 @@ while True:
     print("\nTask Manager")
     print("1. View Tasks")
     print("2. Add Task")
-    print("3. Exit")
+    print("3. Update Task")
+    print("4. Exit")
 
     choice = input("Enter choice: ")
 
@@ -21,7 +22,14 @@ while True:
         print("Task added")
 
     elif choice == "3":
-        break
+        index = int(input("Task number: ")) - 1
+        new_task = input("New task name: ")
+
+        if 0 <= index < len(tasks):
+            tasks[index] = new_task
+            print("Task updated")
+        else:
+            print("Invalid task")
 
     else:
         print("Invalid choice")
