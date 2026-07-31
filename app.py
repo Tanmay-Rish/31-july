@@ -3,7 +3,8 @@ tasks = []
 while True:
     print("\nTask Manager")
     print("1. View Tasks")
-    print("2. Exit")
+    print("2. Add Task")
+    print("3. Exit")
 
     choice = input("Enter choice: ")
 
@@ -15,6 +16,11 @@ while True:
             print("No tasks found")
 
     elif choice == "2":
+        task = input("Enter task: ")
+        tasks.append(task)
+        print("Task added")
+
+    elif choice == "3":
         break
 
     else:
