@@ -16,9 +16,13 @@ while True:
             print("No tasks found")
 
     elif choice == "2":
-        task = input("Enter task: ")
-        tasks.append(task)
-        print("Task added")
+        task = input("Enter task: ").strip()
+
+        if task:
+            tasks.append(task)
+            print("Task added")
+        else:
+            print("Task cannot be empty")
 
     elif choice == "3":
         break
